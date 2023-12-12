@@ -1,0 +1,14 @@
+name: create a comments on new issues
+
+on:
+  issues: 
+    types: [opened]
+
+jobs:
+  comments-with-action: 
+    runs-on: utbuntu-latest
+    steps:
+      - name: "dump github context"
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash
+        
