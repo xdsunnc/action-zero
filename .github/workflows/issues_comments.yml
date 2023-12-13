@@ -9,6 +9,6 @@ jobs:
     runs-on: utbuntu-latest
     steps:
       - name: "dump github context"
-        run: echo '${{ toJSON(github.event) }}' | jq
+        run: echo '${{ toJSON(github.event) }}'
         shell: bash
         
